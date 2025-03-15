@@ -14,7 +14,7 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer{
     public void registerStompEndpoints(StompEndpointRegistry registry) {
         registry.addEndpoint("/chat")
             .setAllowedOrigins("http://localhost:8080")
-            .withSockJS();   //add compatibility to client who doesn't support websockts 
+            .withSockJS();  
     }
 
     @Override
@@ -31,4 +31,5 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer{
  * WebSocket -IT provide continous two way communication channel open between client (front end Appliction ) and server
  * STOMP - It gives structure to communication that we do & define how will be messages are rounted & defined
  * MessageBroking - way of rounting message & it is middle man who direct the message to the right place
+ *  //add compatibility to client who doesn't support websockts 
  */
